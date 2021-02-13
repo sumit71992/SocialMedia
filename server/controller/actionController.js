@@ -117,6 +117,17 @@ const unfollow = (req,res)=>{
       })
    })
 }
+const updateProfilePic=(req,res)=>{
+   mongoose.set('useFindAndModify',false)
+   User.findByIdAndUpdate(req.user._id,{$set:{pic:req.body.pic}},
+      {new:true},
+      (err,result)=>{
+         if(err){
+            return res.status(422).json({error:"Something went wrong"});
+         }
+         res.json(result)
+      })
+}
 module.exports={
    likes:likes,
    unlike:unlike,
@@ -124,4 +135,5 @@ module.exports={
    deletePost:deletePost,
    follow:follow,
    unfollow:unfollow,
+   updateProfilePic,
 }

@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
   },
   pic:{
     type:String,
-    default:""
+    default:"https://res.cloudinary.com/sumit71992/image/upload/v1613209323/avt2_dvylty.jpg"
   },
   followers:[{
     type: mongoose.ObjectId,

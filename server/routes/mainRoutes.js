@@ -25,6 +25,7 @@ router.route("/unlike").put(middle, actionController.unlike);
 router.route("/comment").put(middle, actionController.comments);
 router.route("/follow").put(middle, actionController.follow);
 router.route("/unfollow").put(middle, actionController.unfollow);
+router.route("/updateProfilePic").put(middle, actionController.updateProfilePic);
 
 /********************************DELETE REQUEST*******************************/
 

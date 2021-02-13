@@ -9,7 +9,7 @@ const Signup  = ()=>{
     const [image,setImage] = useState("");
     const [url,setUrl] = useState(undefined);
     useEffect(()=>{
-        if(!url){
+        if(url){
             uploadFields();
         }
     },[url])
